@@ -1,9 +1,9 @@
 package kiwitaxi
 
 type Currency struct {
-	Id   int    `csv:"id"`
-	Code string `csv:"code"`
-	Iso  int    `csv:"iso"`
+	Id   int    `csv:"id" json:"id" bson:"id"`
+	Code string `csv:"code" json:"code" bson:"code"`
+	Iso  int    `csv:"iso" json:"iso" bson:"iso"`
 }
 
 func (a *KiwitaxiApi) Currencies() (currencies []*Currency, err error) {
