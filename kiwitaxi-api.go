@@ -31,11 +31,6 @@ func NewKiwitaxiApi(token string) *KiwitaxiApi {
 	}
 }
 
-type Coordinates struct {
-	Lon float64 `json:"lon" bson:"lon"`
-	Lan float64 `json:"lat" bson:"lat"`
-}
-
 func (a *KiwitaxiApi) SetLogger(logger LoggerInterface) {
 	a.log = logger
 }
