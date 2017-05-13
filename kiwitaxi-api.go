@@ -19,7 +19,7 @@ type LoggerInterface interface {
 
 // NewKiwitaxiApi creates a new instance KiwitaxiApi.
 func NewKiwitaxiApi(token string) *KiwitaxiApi {
-	gocsv.SetCSVReader(func(in io.Reader) *csv.Reader {
+	gocsv.SetCSVReader(func(in io.Reader) gocsv.CSVReader {
 		csvin := csv.NewReader(in)
 		csvin.Comma = '\t'
 		csvin.LazyQuotes = true
